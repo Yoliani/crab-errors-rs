@@ -29,7 +29,7 @@ pub enum CrabError {
 
 #[derive(Debug, Display)]
 #[strum(serialize_all = "SCREAMING_SNAKE_CASE")]
-pub enum AppErrorRetry {
+pub enum CrabErrorRetry {
     None,
     Retry,
     WaitAndRetry,
