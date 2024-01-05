@@ -3,12 +3,12 @@ use libsql::Error as LibSqlError;
 
 
 #[allow(unused)]
-use crate::AppError;
+use crate::CrabError;
 
 
 #[cfg(feature = "libsql_error")]
-impl From<LibSqlError> for AppError {
+impl From<LibSqlError> for CrabError {
     fn from(e: LibSqlError) -> Self {
-        AppError::DatasourceError(e.to_string())
+        CrabError::DatasourceError(e.to_string())
     }
 }

@@ -4,7 +4,7 @@ mod libs;
 use strum_macros::{Display, EnumString};
 
 #[derive(Debug, thiserror::Error)]
-pub enum AppError {
+pub enum CrabError {
     #[error("Could not find resource")]
     NotFound,
     #[error("Could not get info from datasource")]
